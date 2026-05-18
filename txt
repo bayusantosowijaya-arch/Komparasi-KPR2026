@@ -1,0 +1,6 @@
+project/
+│
+├── app.py
+├── kpr-simulator-pro.html
+├── assets/
+└── requirements.txt
