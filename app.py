@@ -491,6 +491,6 @@ with tab2:
         for i, r in enumerate(rows):
             is_best = i == 0
             selisih = r["Cicilan/Bln"] - min_cicilan
-            edited_tag = " if r["Edited"] else ""
-            best_tag = " TERBAIK" if is_best else ""
-            over_tag = f" ⚠
+            edited_tag = "✏️" if r["Edited"] else ""
+best_tag = " TERBAIK" if is_best else ""
+over_tag = " ⚠️" if r["Over Tenor"] else ""
