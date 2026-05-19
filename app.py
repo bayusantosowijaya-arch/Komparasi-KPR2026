@@ -196,7 +196,7 @@ st.markdown("""
     <div class="main-sub">Platform Simulasi KPR Profesional untuk Agen Properti</div>
   </div>
   <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap">
-    <div class="data-badge">✅ Data Riset: 16 Mei 2026</div>
+    <div class="data-badge">✅ Data Riset: 2026</div>
     <a class="wa-contact" href="https://wa.me/6287884256765?text=Halo%2C%20konsultasi%20KPR" target="_blank">💬 0878 8425 6765</a>
   </div>
 </div>
@@ -485,12 +485,15 @@ with tab2:
         else:
             rows.sort(key=lambda x: x["Total Bayar"])
 
-        min_cicilan = rows[0]["Cicilan/Bln"]
+        if rows:
+            min_cicilan = rows[0]["Cicilan/Bln"]
 
-        # Display table
-        for i, r in enumerate(rows):
-            is_best = i == 0
-selisih = r["Cicilan/Bln"] - min_cicilan
-edited_tag = "✏️" if r["Edited"] else ""
-best_tag = " TERBAIK" if is_best else ""
-over_tag = " ⚠️" if r["Over Tenor"] else ""
+            for i, r in enumerate(rows):
+                is_best = i == 0
+                selisih = r["Cicilan/Bln"] - min_cicilan
+                edited_tag = "✏️" if r["Edited"] else ""
+                best_tag = " TERBAIK" if is_best else ""
+                over_tag = " ⚠️" if r["Over Tenor"] else ""
+                # lanjut kode tabel lo...
+else:
+    st.info("💡 Isi Pokok Pinjaman dulu untuk melihat perbandingan 10 bank")
