@@ -494,6 +494,6 @@ with tab2:
                 edited_tag = "✏️" if r["Edited"] else ""
                 best_tag = " TERBAIK" if is_best else ""
                 over_tag = " ⚠️" if r["Over Tenor"] else ""
-                # lanjut kode tabel lo...
+                st.write(f"{r['Bank']} {best_tag} {edited_tag} {over_tag}")
 else:
-    st.info("💡 Isi Pokok Pinjaman dulu untuk melihat perbandingan 10 bank")
+            st.info("💡 Isi Pokok Pinjaman dulu untuk melihat perbandingan 10 bank")
